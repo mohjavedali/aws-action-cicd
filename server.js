@@ -4,7 +4,7 @@ const port = 8000;
 
 
 app.get('/api', (req, res) => {
-    res.send('Hi, I am here..........ddd');
+    res.send('Hi, I am here..........');
 });
 
 app.listen(port, () => {
