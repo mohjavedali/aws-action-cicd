@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config();
 
 app.get('/api', (req, res) => {
-    res.send('Hi, Javed khan here.............');
+    res.send('Hi, Javed khan here.............what is');
 });
 
 app.listen(process.env.PORT, () => {
