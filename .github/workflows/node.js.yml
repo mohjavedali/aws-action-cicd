@@ -35,13 +35,12 @@ jobs:
     - name: Setup environment variables
       run: |
         touch .env
-        echo "DEVELOPER=${{ secrets.developer }}" > .env
+        echo "${{ secrets.DEVELOPER }}" > .env
 
     # Step 5: Install PM2 (if not already installed)
     - name: Install PM2 globally
       run: |
         npm install -g pm2
-        pm2 start server.js --name "backend" || pm2 restart "backend"
 
     # Restart application using PM2
     - name: Restart application with PM2
