@@ -30,6 +30,9 @@ jobs:
     # Install dependencies using npm
     - name: Install dependencies
       run: npm ci
+      run: |
+         touch .env
+         echo "${{secrets.developer}}"> .env
 
     # Restart application using PM2
     - name: Restart application with PM2
